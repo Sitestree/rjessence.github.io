@@ -5,14 +5,23 @@ body {
     padding: 0;
 }
 
-/* Cabeçalho */
+/* Ajuste do cabeçalho para centralizar */
 header {
     background-color: #003366; /* Azul escuro */
     padding: 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Organiza elementos verticalmente */
 }
+
+/* Estilizando a logo */
+.logo {
+    max-width: 150px; /* Ajuste do tamanho da logo */
+    height: auto;
+    margin-bottom: 10px; /* Espaço abaixo da logo */
+}
+
 
 /* Navegação */
 nav ul {
