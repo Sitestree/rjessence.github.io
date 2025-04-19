@@ -1,6 +1,6 @@
 /* Cabeçalho */
 header {
-    background-color: #8b4513; /* Marrom escuro */
+    background-color: #003366; /* Azul escuro */
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -22,7 +22,7 @@ nav ul li a {
 
 /* Botão de promoção */
 button {
-    background-color: #a0522d; /* Cor marrom mais clara */
+    background-color: #0055aa; /* Azul médio para destacar */
     color: white;
     padding: 10px 20px;
     border: none;
@@ -32,7 +32,7 @@ button {
 }
 
 button:hover {
-    background-color: #5a2a1b; /* Mantendo o efeito de hover */
+    background-color: #002244; /* Azul ainda mais escuro para efeito hover */
 }
 
 
