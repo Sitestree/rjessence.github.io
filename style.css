@@ -1,7 +1,6 @@
-
 /* Cabeçalho */
 header {
-    background-color: #a0522d; /* Cor marrom */
+    background-color: #8b4513; /* Cor marrom mais escuro */
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -23,7 +22,7 @@ nav ul li a {
 
 /* Botão de promoção */
 button {
-    background-color: #8b4513;
+    background-color: #a0522d; /* Cor marrom mais clara */
     color: white;
     padding: 10px 20px;
     border: none;
@@ -33,6 +32,9 @@ button {
 }
 
 button:hover {
+    background-color: #5a2a1b; /* Mantendo o efeito de hover */
+}
+
     background-color: #5a2a1b;
 }
 
