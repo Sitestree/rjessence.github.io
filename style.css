@@ -5,25 +5,22 @@ body {
     padding: 0;
 }
 
-/* Ajuste do cabeçalho para centralizar */
+/* Cabeçalho */
 header {
     background-color: #003366; /* Azul escuro */
-    padding: 20px;
+    padding: 10px 0;
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    flex-direction: column; /* Organiza elementos verticalmente */
+    flex-direction: column;
+    align-items: center; /* Centraliza elementos verticalmente */
+    justify-content: center;
 }
 
-/* Estilizando a logo */
+/* Logo dentro do cabeçalho */
 .logo {
-    max-width: 100%; /* Garante que não ultrapasse o contêiner */
-    height: auto; /* Mantém a proporção */
-    display: block;
-    margin: 0 auto; /* Centraliza horizontalmente */
+    width: 120px; /* Reduz o tamanho da logo */
+    height: auto;
+    margin-bottom: 10px; /* Espaço abaixo da logo */
 }
-
-
 
 /* Navegação */
 nav ul {
@@ -39,10 +36,14 @@ nav ul li a {
 }
 
 /* Ícones */
+.icon-group {
+    display: flex;
+    gap: 15px;
+}
+
 .icon-group a {
     color: white;
     font-size: 18px;
-    margin: 0 10px;
 }
 
 /* Banner Promocional */
@@ -91,6 +92,19 @@ nav ul li a {
 
 .add-to-cart:hover {
     background-color: #002752;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .logo {
+        width: 100px; /* Ajusta para telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 80px;
+    }
 }
 
 
