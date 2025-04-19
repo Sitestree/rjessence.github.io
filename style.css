@@ -4,16 +4,9 @@ body {
     margin: 0;
     padding: 0;
 }
-
-/* Ajustando a altura do cabeçalho */
 header {
-    background-color: #003366; /* Azul escuro */
-    padding: 20px 0; /* Aumentando o espaçamento interno */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    height: 80px; /* Ajuste da altura fixa */
+    background-color: #003366;
+    padding: 30px 0; /* Maior espaçamento sem fixar altura */
 }
 
 
