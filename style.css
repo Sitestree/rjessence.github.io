@@ -15,15 +15,17 @@ header {
     position: relative;
 }
 
-/* Logo totalmente centralizada */
+/* Centralizar a logo corretamente */
 .logo-container {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
 }
 
 .logo {
-    width: 60px; /* Reduzindo tamanho */
+    width: 60px;
     height: auto;
 }
 
@@ -31,8 +33,7 @@ header {
 nav {
     flex: 1;
     display: flex;
-    justify-content: flex-start; /* Mantendo alinhado à esquerda */
-    padding-left: 20px;
+    justify-content: flex-start;
 }
 
 nav ul {
@@ -57,20 +58,41 @@ nav ul li a {
 .icon-group {
     flex: 1;
     display: flex;
-    justify-content: flex-end; /* Mantendo alinhado à direita */
-    align-items: center;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+    justify-content: flex-end;
 }
 
 .icon-group a {
     color: white;
     font-size: 18px;
     text-decoration: none;
-    margin-left: 10px; /* Separação entre ícones */
+    margin-left: 10px;
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .logo {
+        width: 50px;
+    }
+
+    .icon-group {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 40px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .icon-group {
+        justify-content: center;
+    }
+}
+
 
 /* Banner Promocional */
 .promo-banner {
