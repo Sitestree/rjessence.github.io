@@ -17,10 +17,10 @@ header {
 
 /* Logo */
 .logo {
-    width: 80px; /* Reduzindo tamanho da logo */
+    width: 10px; /* Reduzindo ao mínimo */
     height: auto; /* Mantendo proporção */
-    margin-bottom: 10px; /* Espaçamento abaixo da logo */
 }
+
 
 /* Navegação */
 nav ul {
