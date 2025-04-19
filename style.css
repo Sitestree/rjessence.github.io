@@ -8,21 +8,26 @@ body {
 /* Cabeçalho */
 header {
     background-color: #003366; /* Azul escuro */
-    padding: 10px 0;
+    padding: 10px;
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    flex-direction: column; /* Organiza elementos verticalmente */
+    align-items: center;
+    justify-content: space-between; /* Mantém nav à esquerda e ícones à direita */
+    position: relative;
 }
 
 /* Logo */
 .logo {
-    width: 10px; /* Reduzindo ao mínimo */
-    height: auto; /* Mantendo proporção */
+    width: 60px; /* Tamanho reduzido da logo */
+    height: auto;
 }
 
-
 /* Navegação */
+nav {
+    display: flex;
+    justify-content: flex-start; /* Alinhando à esquerda */
+    align-items: center;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -44,11 +49,15 @@ nav ul li a {
 .icon-group {
     display: flex;
     gap: 15px;
+    position: absolute;
+    right: 20px; /* Mantém os ícones no lado direito */
+    top: 15px; /* Ajusta a posição vertical */
 }
 
 .icon-group a {
     color: white;
     font-size: 18px;
+    text-decoration: none;
 }
 
 /* Banner Promocional */
@@ -102,13 +111,17 @@ nav ul li a {
 /* Responsividade */
 @media (max-width: 768px) {
     .logo {
-        width: 60px; /* Ajusta para telas menores */
+        width: 50px; /* Ajusta para telas médias */
     }
 }
 
 @media (max-width: 480px) {
     .logo {
-        width: 50px;
+        width: 40px; /* Ajusta para telas menores */
+    }
+
+    .icon-group {
+        right: 10px; /* Ajuste fino da posição dos ícones */
     }
 }
 
