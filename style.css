@@ -17,10 +17,12 @@ header {
 
 /* Estilizando a logo */
 .logo {
-    max-width: 150px; /* Ajuste do tamanho da logo */
-    height: auto;
-    margin-bottom: 10px; /* Espaço abaixo da logo */
+    max-width: 100%; /* Garante que não ultrapasse o contêiner */
+    height: auto; /* Mantém a proporção */
+    display: block;
+    margin: 0 auto; /* Centraliza horizontalmente */
 }
+
 
 
 /* Navegação */
