@@ -5,15 +5,17 @@ body {
     padding: 0;
 }
 
-/* Cabeçalho */
+/* Ajustando a altura do cabeçalho */
 header {
     background-color: #003366; /* Azul escuro */
-    padding: 10px;
+    padding: 20px 0; /* Aumentando o espaçamento interno */
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
+    height: 80px; /* Ajuste da altura fixa */
 }
+
 
 /* Centralizar a logo corretamente */
 .logo-container {
