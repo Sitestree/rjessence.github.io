@@ -11,27 +11,31 @@ header {
     padding: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Distribui os elementos corretamente */
     position: relative;
 }
 
-/* Centralizando a logo */
+/* Centralizando a logo corretamente */
 .logo-container {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
-    width: 60px;
+    width: 60px; /* Reduzindo tamanho */
     height: auto;
 }
 
 /* Navegação alinhada à esquerda */
 nav {
+    flex: 1;
     display: flex;
-    justify-content: flex-start;
-    flex-grow: 1;
+    justify-content: flex-start; /* Mantendo alinhado à esquerda */
+    padding-left: 20px;
 }
 
 nav ul {
@@ -39,7 +43,7 @@ nav ul {
     display: flex;
     gap: 20px;
     padding: 0;
-    margin-left: 20px;
+    margin: 0;
 }
 
 nav ul li {
@@ -54,18 +58,18 @@ nav ul li a {
 
 /* Ícones do cabeçalho alinhados à direita */
 .icon-group {
+    flex: 1;
     display: flex;
-    gap: 15px;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+    justify-content: flex-end; /* Mantendo alinhado à direita */
+    align-items: center;
+    padding-right: 20px;
 }
 
 .icon-group a {
     color: white;
     font-size: 18px;
     text-decoration: none;
+    margin-left: 10px; /* Separação entre ícones */
 }
 
 /* Banner Promocional */
@@ -123,7 +127,7 @@ nav ul li a {
     }
 
     .icon-group {
-        right: 10px;
+        justify-content: center; /* Ajusta os ícones corretamente */
     }
 }
 
@@ -132,12 +136,12 @@ nav ul li a {
         width: 40px;
     }
 
-    .icon-group {
-        right: 5px;
-    }
-
     nav ul {
         flex-direction: column;
+    }
+
+    .icon-group {
+        justify-content: center;
     }
 }
 
