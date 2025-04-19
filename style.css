@@ -10,16 +10,16 @@ header {
     background-color: #003366; /* Azul escuro */
     padding: 10px 0;
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza elementos verticalmente */
-    justify-content: center;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Organiza elementos verticalmente */
 }
 
-/* Logo dentro do cabeçalho */
+/* Logo */
 .logo {
-    width: 120px; /* Reduz o tamanho da logo */
-    height: auto;
-    margin-bottom: 10px; /* Espaço abaixo da logo */
+    width: 80px; /* Reduzindo tamanho da logo */
+    height: auto; /* Mantendo proporção */
+    margin-bottom: 10px; /* Espaçamento abaixo da logo */
 }
 
 /* Navegação */
@@ -27,6 +27,11 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
 }
 
 nav ul li a {
@@ -35,7 +40,7 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Ícones */
+/* Ícones do cabeçalho */
 .icon-group {
     display: flex;
     gap: 15px;
@@ -97,14 +102,13 @@ nav ul li a {
 /* Responsividade */
 @media (max-width: 768px) {
     .logo {
-        width: 100px; /* Ajusta para telas menores */
+        width: 60px; /* Ajusta para telas menores */
     }
 }
 
 @media (max-width: 480px) {
     .logo {
-        width: 80px;
+        width: 50px;
     }
 }
-
 
