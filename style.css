@@ -11,27 +11,27 @@ header {
     padding: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ajusta layout corretamente */
+    justify-content: space-between;
     position: relative;
 }
 
 /* Centralizando a logo */
 .logo-container {
-    flex-grow: 1; /* Permite que a logo ocupe o espaço do meio */
-    display: flex;
-    justify-content: center; /* Mantém a logo centralizada */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .logo {
-    width: 50px; /* Reduzindo tamanho da logo */
+    width: 60px;
     height: auto;
 }
 
-/* Navegação à esquerda */
+/* Navegação alinhada à esquerda */
 nav {
     display: flex;
-    justify-content: flex-start; /* Mantendo alinhado à esquerda */
-    flex-grow: 1; /* Ocupa espaço na esquerda */
+    justify-content: flex-start;
+    flex-grow: 1;
 }
 
 nav ul {
@@ -39,6 +39,7 @@ nav ul {
     display: flex;
     gap: 20px;
     padding: 0;
+    margin-left: 20px;
 }
 
 nav ul li {
@@ -55,8 +56,10 @@ nav ul li a {
 .icon-group {
     display: flex;
     gap: 15px;
-    justify-content: flex-end; /* Mantendo ícones alinhados à direita */
-    flex-grow: 1; /* Permite ocupar espaço na direita */
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .icon-group a {
@@ -116,25 +119,25 @@ nav ul li a {
 /* Responsividade */
 @media (max-width: 768px) {
     .logo {
-        width: 40px;
+        width: 50px;
     }
 
     .icon-group {
-        justify-content: center; /* Ajusta os ícones corretamente */
+        right: 10px;
     }
 }
 
 @media (max-width: 480px) {
     .logo {
-        width: 35px;
-    }
-
-    nav ul {
-        flex-direction: column; /* Ajuste melhor para telas menores */
+        width: 40px;
     }
 
     .icon-group {
-        justify-content: center;
+        right: 5px;
+    }
+
+    nav ul {
+        flex-direction: column;
     }
 }
 
