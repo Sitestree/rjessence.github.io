@@ -103,17 +103,20 @@ nav ul li a {
 .banner-link {
     display: block;
     text-align: center;
-    margin: 40px auto; /* Centraliza o banner */
-    width: 100%; /* Ocupa toda a largura */
+    margin: 0 auto; /* Remove margens extras e centraliza */
+    width: 100%;
 }
 
 .banner img {
-    max-width: 100%; /* Faz a imagem se ajustar ao contêiner */
-    height: auto; /* Mantém a proporção */
+    width: 100%; /* Ocupa toda a largura da tela */
+    height: auto;
+    max-height: 100px; /* Ajusta a altura do banner conforme o cabeçalho */
     display: block;
-    margin: 0 auto; /* Centraliza horizontalmente */
+    object-fit: cover; /* Ajusta sem distorcer a imagem */
+    margin: 0 auto;
     border-radius: 8px; /* Bordas arredondadas (opcional) */
 }
+
 
 /* Media Query para telas menores */
 @media (max-width: 768px) {
