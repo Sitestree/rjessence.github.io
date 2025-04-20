@@ -63,15 +63,16 @@ nav ul li a {
 .icon-group {
     flex: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-evenly; /* Distribui os ícones de maneira uniforme */
+    width: 100%; /* Garante que ocupe toda a largura disponível */
 }
 
 .icon-group a {
     color: white;
     font-size: 18px;
     text-decoration: none;
-    margin-left: 10px;
 }
+
 
 /* Responsividade */
 @media (max-width: 768px) {
