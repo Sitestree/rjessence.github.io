@@ -160,11 +160,12 @@ nav ul li a {
 }
 
 .product img {
-    width: 150px; /* Define largura máxima */
+    width: 150px;
     height: auto; /* Mantém proporção correta */
+    display: block; /* Evita espaços indesejados ao redor */
     margin-bottom: 5px;
-    border-radius: 10px; /* Opcional para estilização */
 }
+
 
 
 
