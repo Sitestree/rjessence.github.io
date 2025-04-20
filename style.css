@@ -110,7 +110,7 @@ nav ul li a {
 .banner img {
     width: 100%;
     height: auto;
-    max-width: 1200px; /* Limita a largura do banner */
+    max-width: 1000px; /* Limita a largura do banner */
     display: block;
     object-fit: cover;
     margin: 0 auto;
