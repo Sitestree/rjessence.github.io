@@ -8,18 +8,21 @@ body {
 /* Ajustando a altura do cabeçalho */
 header {
     background-color: #003366; /* Azul escuro */
-    padding: 15px 0; /* Reduzindo o espaçamento interno para evitar altura excessiva */
+    padding: 20px 0; /* Aumentando o espaçamento interno */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: auto; /* Deixa a altura mais dinâmica */
+    position: relative;
+    height: 100px; /* Ajuste da altura fixa */
 }
 
 /* Centralizar a logo corretamente */
 .logo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    width: 100%;
 }
 
 .logo {
@@ -27,21 +30,21 @@ header {
     height: auto;
 }
 
-/* Navegação centralizada e flexível */
+/* Navegação alinhada à esquerda */
 nav {
+    flex: 1;
     display: flex;
-    justify-content: center;
-    width: 100%;
+    justify-content: center; /* Centraliza a navegação */
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 20px;
     padding: 0;
     margin: 0;
-    flex-wrap: wrap; /* Permite ajuste automático em telas menores */
-    justify-content: center;
+    justify-content: space-evenly; /* Distribui os itens de maneira uniforme */
+    width: 100%; /* Garante que ocupe todo o espaço disponível */
 }
 
 nav ul li {
@@ -54,40 +57,81 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Ícones do cabeçalho alinhados corretamente */
+/* Ícones do cabeçalho alinhados à direita */
 .icon-group {
     display: flex;
-    gap: 8px;
-    margin-right: 20px;
-    flex-wrap: wrap; /* Permite melhor ajuste em telas pequenas */
+    justify-content: center; /* Centraliza os ícones */
+    gap: 8px; /* Reduz a distância entre os ícones */
+    width: auto; /* Impede que o contêiner ocupe toda a largura */
+    margin-right: 20px; /* Afasta o grupo da margem direita */
 }
 
 /* Garantindo que os ícones fiquem sempre brancos */
 .icon-group a {
-    color: white !important;
-    text-decoration: none;
+    color: white !important; /* Força a cor branca para evitar mudanças inesperadas */
+    text-decoration: none; /* Remove qualquer sublinhado */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .logo {
+        width: 50px;
+    }
+    .icon-group {
+        justify-content: center;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 40px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .icon-group {
+        justify-content: center;
+    }
 }
 
 /* Banner Promocional */
 .banner-link {
     display: block;
     text-align: center;
-    margin: 20px auto;
-    width: 100%;
+    margin: 40px auto; /* Centraliza o banner */
+    width: 100%; /* Ocupa toda a largura */
 }
 
 .banner img {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; /* Faz a imagem se ajustar ao contêiner */
+    height: auto; /* Mantém a proporção */
     display: block;
-    margin: 0 auto;
-    border-radius: 8px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    border-radius: 8px; /* Bordas arredondadas (opcional) */
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    .banner img {
+        max-width: 90%; /* Reduz um pouco o tamanho em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner img {
+        max-width: 80%; /* Ajusta ainda mais para dispositivos móveis */
+    }
 }
 
 /* Seção de Produtos */
 .products {
     display: flex;
-    flex-wrap: wrap; /* Adapta os produtos conforme o tamanho da tela */
+    flex-wrap: wrap; /* Adaptação automática para telas menores */
     justify-content: center;
     gap: 20px;
     width: 100%;
@@ -99,69 +143,26 @@ nav ul li a {
     align-items: center;
     text-decoration: none;
     color: black;
-    width: calc(100% / 3 - 20px); /* Ajuste para distribuição mais uniforme */
+    width: 200px; /* Mantém tamanho proporcional */
 }
 
-/* Ajuste do tamanho das imagens */
 .product img {
-    max-width: 100%;
+    width: 200px;
     height: auto;
+    display: block;
+    position: relative;
 }
 
-/* Ajuste de responsividade */
+/* Responsividade para produtos */
 @media (max-width: 768px) {
-    .products {
-        flex-wrap: wrap; /* Permite que os produtos se ajustem */
-        justify-content: center;
-        gap: 10px;
-    }
-
     .product {
-        width: 45%; /* Mantém dois produtos por linha */
-        text-align: center;
-    }
-
-    .product img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    /* Cabeçalho */
-    header {
-        flex-direction: column; /* Organiza os itens verticalmente */
-        align-items: center;
-        height: auto; /* Ajuste dinâmico */
-        padding: 10px 0;
-    }
-
-    .logo-container {
-        position: static;
-        transform: none;
-        text-align: center;
-    }
-
-    .logo {
-        width: 70px;
-    }
-
-    nav ul {
-        flex-direction: column; /* Menu empilhado no celular */
-        align-items: center;
-        padding: 0;
-    }
-
-    .icon-group {
-        justify-content: center;
+        width: 45%; /* Dois produtos por linha */
     }
 }
 
 @media (max-width: 480px) {
     .product {
-        width: 100%; /* Apenas um produto por linha */
-    }
-
-    .logo {
-        width: 50px;
+        width: 100%; /* Um produto por linha */
     }
 }
 
