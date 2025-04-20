@@ -163,10 +163,10 @@ nav ul li a {
     width: 200px;
     height: auto;
     display: block;
-    margin-bottom: 10px;
     position: relative;
-    top: -10px; /* Move as imagens um pouco para cima */
+    top: -20px; /* Eleva os ícones dentro da seção */
 }
+
 
 
 
