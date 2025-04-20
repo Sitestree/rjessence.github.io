@@ -163,8 +163,8 @@ nav ul li a {
     width: 200px;
     height: auto;
     display: block;
-    position: relative;
-    top: -40px; /* Eleva os ícones dentro da seção */
+    position: absolute;
+    top: -40px; /* Ajuste para subir os ícones */
 }
 
 
