@@ -131,11 +131,11 @@ nav ul li a {
 /* Seção de Produtos */
 .products {
     display: flex;
-    flex-wrap: wrap; /* Adaptação automática para telas menores */
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    width: 100%;
+    gap: 30px; /* Aumenta a separação entre os produtos */
 }
+
 
 .product {
     display: flex;
