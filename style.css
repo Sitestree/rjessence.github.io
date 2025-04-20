@@ -67,11 +67,10 @@ nav ul li a {
     width: 100%; /* Garante que ocupe toda a largura disponível */
 }
 
-.icon-group a {
-    color: white;
-    font-size: 18px;
-    text-decoration: none;
+.icon-group {
+    justify-content: space-between; /* Espaçamento uniforme sem tocar nas bordas */
 }
+
 
 
 /* Responsividade */
