@@ -155,16 +155,17 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-decoration: none; /* Remove o sublinhado dos links */
-    color: black; /* Define a cor do texto */
+    text-decoration: none;
+    color: black;
 }
 
 .product img {
-    width: 80px; /* Ajuste conforme necessário */
-    height: 80px;
+    width: 150px; /* Define largura máxima */
+    height: auto; /* Mantém proporção correta */
     margin-bottom: 5px;
-    border-radius: 50%; /* Opcional para deixar os ícones circulares */
+    border-radius: 10px; /* Opcional para estilização */
 }
+
 
 
 
