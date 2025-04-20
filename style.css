@@ -82,10 +82,11 @@ nav ul li a {
 }
 
 .banner {
-    width: 50%; /* Mantém apenas 50% da largura total */
+    width: 500px; /* Define uma largura fixa */
     height: 100px;
     object-fit: cover;
     overflow: hidden;
+    margin: 0 auto;
 }
 
 /* Seção de Produtos */
