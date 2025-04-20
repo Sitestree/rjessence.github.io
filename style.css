@@ -160,11 +160,14 @@ nav ul li a {
 }
 
 .product img {
-    width: 150px;
-    height: auto; /* Mantém proporção correta */
-    display: block; /* Evita espaços indesejados ao redor */
-    margin-bottom: 5px;
+    width: 200px;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    top: -10px; /* Move as imagens um pouco para cima */
 }
+
 
 
 
