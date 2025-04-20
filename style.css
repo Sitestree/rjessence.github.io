@@ -134,6 +134,7 @@ nav ul li a {
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px; /* Aumenta a separação entre os produtos */
+    margin-bottom: 50px; /* Eleva os produtos mais para cima */
 }
 
 
