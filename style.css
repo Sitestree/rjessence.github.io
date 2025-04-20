@@ -145,16 +145,20 @@ nav ul li a {
 
 /* Seção de Produtos */
 .products {
-    display: flex; /* Ativa o layout flexível */
-    gap: 20px; /* Espaçamento entre os itens */
-    justify-content: center; /* Centraliza os produtos */
+    display: flex;
+    flex-wrap: nowrap; /* Garante que os itens fiquem em uma única linha */
+    gap: 20px;
+    justify-content: center;
 }
 
 .product {
-    background-color: #f4f4f4; /* Apenas para visualização */
+    background-color: #f4f4f4;
     padding: 10px;
     border-radius: 5px;
+    width: 150px; /* Define uma largura fixa */
+    text-align: center; /* Centraliza o texto */
 }
+
 
 
 
