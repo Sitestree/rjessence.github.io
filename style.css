@@ -108,7 +108,7 @@ nav ul li a {
 }
 
 .banner img {
-    width: 100%; /* Ocupa toda a largura da tela */
+    width: 80%; /* Ocupa toda a largura da tela */
     height: auto;
     max-height: 100px; /* Ajusta a altura do banner conforme o cabeçalho */
     display: block;
