@@ -67,12 +67,13 @@ nav ul li a {
     width: auto; /* Impede que o contêiner ocupe toda a largura */
 }
 
-.icon-group a {
-    color: white;
-    font-size: 18px;
-    text-decoration: none;
-    margin-right: 5px; /* Aproxima os ícones */
+.icon-group {
+    display: flex;
+    justify-content: center; /* Mantém os ícones alinhados */
+    gap: 8px; /* Mantém uma distância equilibrada entre os ícones */
+    margin-right: 20px; /* Afasta o grupo da margem direita */
 }
+
 
 
 
