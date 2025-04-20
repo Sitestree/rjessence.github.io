@@ -156,14 +156,15 @@ nav ul li a {
 
 /* Responsividade para produtos */
 @media (max-width: 768px) {
+    .products {
+        flex-direction: column; /* Organiza verticalmente */
+        align-items: center;
+        gap: 20px; /* Ajusta a separação */
+    }
+
     .product {
-        width: 45%; /* Dois produtos por linha */
+        width: 80%; /* Ocupa mais espaço */
     }
 }
 
-@media (max-width: 480px) {
-    .product {
-        width: 100%; /* Um produto por linha */
-    }
-}
 
