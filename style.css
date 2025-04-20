@@ -146,18 +146,26 @@ nav ul li a {
 /* Seção de Produtos */
 .products {
     display: flex;
-    justify-content: space-evenly; /* Distribui os elementos de maneira uniforme */
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
 }
 
 .product {
-    background-color: #f4f4f4;
-    padding: 10px;
-    border-radius: 5px;
-    width: 150px; /* Tamanho uniforme */
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: black; /* Define a cor do texto */
 }
+
+.product img {
+    width: 80px; /* Ajuste conforme necessário */
+    height: 80px;
+    margin-bottom: 5px;
+    border-radius: 50%; /* Opcional para deixar os ícones circulares */
+}
+
 
 
 
