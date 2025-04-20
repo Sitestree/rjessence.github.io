@@ -146,17 +146,17 @@ nav ul li a {
 /* Seção de Produtos */
 .products {
     display: flex;
-    flex-wrap: nowrap; /* Garante que os itens fiquem em uma única linha */
-    gap: 20px;
-    justify-content: center;
+    justify-content: space-evenly; /* Distribui os elementos de maneira uniforme */
+    align-items: center;
+    width: 100%;
 }
 
 .product {
     background-color: #f4f4f4;
     padding: 10px;
     border-radius: 5px;
-    width: 150px; /* Define uma largura fixa */
-    text-align: center; /* Centraliza o texto */
+    width: 150px; /* Tamanho uniforme */
+    text-align: center;
 }
 
 
