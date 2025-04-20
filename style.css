@@ -93,7 +93,7 @@ nav ul li a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 120px; /* Ajusta a separação entre os produtos */
+    gap: 140px; /* Ajusta a separação entre os produtos */
     margin-top: 50px; /* Move a seção de produtos mais para baixo */
 }
 
