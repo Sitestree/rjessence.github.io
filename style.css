@@ -114,23 +114,32 @@ nav ul li a {
 /* Banner Promocional */
 .banner-link {
     display: block;
+    text-align: center;
+    margin: 40px auto; /* Centraliza o banner */
     width: 100%; /* Ocupa toda a largura */
-    text-align: center; /* Centraliza o conteúdo */
-    margin: 40px 0; /* Adiciona espaçamento acima e abaixo */
-    text-decoration: none; /* Remove sublinhado do link */
 }
 
 .banner img {
-    max-width: 80%; /* Ajusta o tamanho do banner */
+    max-width: 100%; /* Faz a imagem se ajustar ao contêiner */
     height: auto; /* Mantém a proporção */
     display: block;
     margin: 0 auto; /* Centraliza horizontalmente */
     border-radius: 8px; /* Bordas arredondadas (opcional) */
 }
 
-.banner-link:hover .banner img {
-    opacity: 0.8; /* Efeito ao passar o mouse */
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    .banner img {
+        max-width: 90%; /* Reduz um pouco o tamanho em telas menores */
+    }
 }
+
+@media (max-width: 480px) {
+    .banner img {
+        max-width: 80%; /* Ajusta ainda mais para dispositivos móveis */
+    }
+}
+
 
 
 
