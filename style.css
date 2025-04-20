@@ -72,6 +72,18 @@ nav ul li a {
     color: white !important;
     text-decoration: none;
 }
+@media (max-width: 768px) {
+    .banner {
+        width: 95vw;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        width: 100vw; /* Em telas muito pequenas, ocupa toda a largura */
+    }
+}
 
 /* Banner Promocional */
 .banner-link {
