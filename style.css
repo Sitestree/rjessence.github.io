@@ -133,7 +133,7 @@ nav ul li a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 80px; /* Aumenta a separação entre os produtos */
+    gap: 100px; /* Aumenta a separação entre os produtos */
     margin-bottom: 50px; /* Eleva os produtos mais para cima */
 }
 
