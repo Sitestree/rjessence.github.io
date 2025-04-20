@@ -109,11 +109,10 @@ nav ul li a {
 
 .banner img {
     width: 100%;
-    height: 100px; /* Garante que fique do tamanho do cabeçalho */
-    object-fit: cover; /* Corta o excesso sem distorcer */
-    overflow: hidden; /* Evita que parte da imagem ultrapasse */
+    height: 120px; /* Ajuste a altura conforme necessário */
+    object-fit: cover;
+    clip-path: inset(20px 0 0 0); /* Corta 20px do topo */
 }
-
 
 
 /* Media Query para telas menores */
