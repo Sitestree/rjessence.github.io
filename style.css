@@ -144,13 +144,13 @@ nav ul li a {
 
 
 /* Seção de Produtos */
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    text-align: center;
+.product h3 {
+    font-size: 18px; /* Define o tamanho do texto */
+    font-weight: bold; /* Destaca o nome */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 10px; /* Espaçamento entre o nome e a imagem */
 }
+
 
 .product img {
     width: 100%;
