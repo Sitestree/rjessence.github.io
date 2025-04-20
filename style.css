@@ -82,7 +82,7 @@ nav ul li a {
 }
 
 .banner {
-    width: 80%; /* Mantém apenas 80% da largura total */
+    width: 50%; /* Mantém apenas 50% da largura total */
     height: 100px;
     object-fit: cover;
     overflow: hidden;
