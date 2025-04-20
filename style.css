@@ -146,15 +146,16 @@ nav ul li a {
 /* Seção de Produtos */
 .product {
     display: flex;
-    align-items: center; /* Alinha verticalmente */
+    align-items: center; /* Mantém imagem e nome alinhados */
     gap: 20px; /* Espaçamento entre nome e imagem */
     padding: 15px;
     border-radius: 8px;
+    justify-content: flex-start; /* Mantém o texto e imagem organizados */
 }
 
 .product-info {
-    flex: 1; /* Permite que o texto ocupe espaço proporcional */
-    text-align: left; /* Mantém o nome alinhado corretamente */
+    flex: 0 1 150px; /* Define um tamanho adequado para o texto */
+    text-align: left; /* Mantém alinhado corretamente */
 }
 
 .product img {
@@ -164,21 +165,6 @@ nav ul li a {
     border-radius: 8px;
 }
 
-
-.product h3 {
-    font-size: 18px;
-    font-weight: bold;
-    text-align: left; /* Mantém alinhado à esquerda */
-    margin: 0; /* Remove margens adicionais */
-    flex: 1; /* Permite que o nome ocupe espaço igual ao da imagem */
-}
-
-.product img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-}
 
 
 /* Responsividade */
