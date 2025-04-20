@@ -61,15 +61,19 @@ nav ul li a {
 
 /* Ícones do cabeçalho alinhados à direita */
 .icon-group {
-    flex: 1;
     display: flex;
-    justify-content: space-evenly; /* Distribui os ícones de maneira uniforme */
-    width: 100%; /* Garante que ocupe toda a largura disponível */
+    justify-content: center; /* Centraliza os ícones */
+    gap: 8px; /* Reduz a distância entre os ícones */
+    width: auto; /* Impede que o contêiner ocupe toda a largura */
 }
 
-.icon-group {
-    justify-content: space-between; /* Espaçamento uniforme sem tocar nas bordas */
+.icon-group a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    margin-right: 5px; /* Aproxima os ícones */
 }
+
 
 
 
