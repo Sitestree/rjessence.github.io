@@ -74,6 +74,13 @@ nav ul li a {
     margin-right: 20px; /* Afasta o grupo da margem direita */
 }
 
+/* Garantindo que os ícones fiquem sempre brancos */
+.icon-group a {
+    color: white !important; /* Força a cor branca para evitar mudanças inesperadas */
+    text-decoration: none; /* Remove qualquer sublinhado */
+}
+
+
 
 
 
