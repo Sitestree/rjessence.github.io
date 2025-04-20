@@ -107,11 +107,11 @@ nav ul li a {
     width: 100%;
 }
 
-.banner img {
+.banner {
     width: 100%;
-    height: auto;
-    object-fit: cover;
-    clip-path: inset(0 50px 0 0); /* Corta 50px do lado direito */
+    height: 100px; /* Altura igual ao cabeçalho */
+    overflow: hidden; /* Impede que ultrapasse a área visível */
+    position: relative;
 }
 
 
