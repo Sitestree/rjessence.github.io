@@ -144,26 +144,18 @@ nav ul li a {
 
 
 /* Seção de Produtos */
+.products {
+    display: flex; /* Ativa o layout flexível */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza os produtos */
+}
+
 .product {
-    display: flex;
-    align-items: center; /* Mantém imagem e nome alinhados */
-    gap: 20px; /* Espaçamento entre nome e imagem */
-    padding: 15px;
-    border-radius: 8px;
-    justify-content: flex-start; /* Mantém o texto e imagem organizados */
+    background-color: #f4f4f4; /* Apenas para visualização */
+    padding: 10px;
+    border-radius: 5px;
 }
 
-.product-info {
-    flex: 0 1 150px; /* Define um tamanho adequado para o texto */
-    text-align: left; /* Mantém alinhado corretamente */
-}
-
-.product img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-}
 
 
 
