@@ -108,37 +108,60 @@ nav ul li a {
     height: auto;
 }
 
-/* Melhor responsividade */
+/* Ajuste de responsividade */
 @media (max-width: 768px) {
-    .logo {
-        width: 60px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .products {
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap; /* Permite que os produtos se ajustem */
+        justify-content: center;
+        gap: 10px;
     }
 
     .product {
-        width: 80%; /* Ajusta o tamanho dos produtos no celular */
+        width: 45%; /* Mantém dois produtos por linha */
+        text-align: center;
     }
-}
 
-@media (max-width: 480px) {
+    .product img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Cabeçalho */
+    header {
+        flex-direction: column; /* Organiza os itens verticalmente */
+        align-items: center;
+        height: auto; /* Ajuste dinâmico */
+        padding: 10px 0;
+    }
+
+    .logo-container {
+        position: static;
+        transform: none;
+        text-align: center;
+    }
+
     .logo {
-        width: 50px;
+        width: 70px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Menu empilhado no celular */
+        align-items: center;
+        padding: 0;
     }
 
     .icon-group {
         justify-content: center;
     }
+}
 
-    .banner img {
-        max-width: 90%;
+@media (max-width: 480px) {
+    .product {
+        width: 100%; /* Apenas um produto por linha */
+    }
+
+    .logo {
+        width: 50px;
     }
 }
+
