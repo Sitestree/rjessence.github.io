@@ -14,6 +14,7 @@ header {
     justify-content: space-between;
     position: relative;
     height: 100px; /* Ajuste da altura fixa */
+    margin-bottom: 50px; /* Move todo o conteúdo abaixo do cabeçalho */
 }
 
 /* Centralizar a logo corretamente */
@@ -44,7 +45,7 @@ nav ul {
     padding: 0;
     margin: 0;
     justify-content: space-evenly; /* Distribui os itens de maneira uniforme */
-    width: 100%; /* Garante que ocupe todo o espaço disponível */
+    width: 100%;
 }
 
 nav ul li {
@@ -62,70 +63,29 @@ nav ul li a {
     display: flex;
     justify-content: center; /* Centraliza os ícones */
     gap: 8px; /* Reduz a distância entre os ícones */
-    width: auto; /* Impede que o contêiner ocupe toda a largura */
+    width: auto;
     margin-right: 20px; /* Afasta o grupo da margem direita */
 }
 
 /* Garantindo que os ícones fiquem sempre brancos */
 .icon-group a {
-    color: white !important; /* Força a cor branca para evitar mudanças inesperadas */
-    text-decoration: none; /* Remove qualquer sublinhado */
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .logo {
-        width: 50px;
-    }
-    .icon-group {
-        justify-content: center;
-    }
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        width: 40px;
-    }
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-    .icon-group {
-        justify-content: center;
-    }
+    color: white !important;
+    text-decoration: none;
 }
 
 /* Banner Promocional */
 .banner-link {
     display: block;
     text-align: center;
-    margin: 0 auto; /* Remove margens extras e centraliza */
+    margin: 50px auto; /* Move o banner para baixo */
     width: 100%;
 }
 
 .banner {
-    width: 100%; /* Ocupa toda a largura da tela */
+    width: 100%;
     height: 100px; /* Ajusta a altura do banner conforme o cabeçalho */
-    object-fit: cover; /* Mantém o corte sem distorcer */
-    overflow: hidden; /* Impede que ultrapasse os limites */
-}
-
-
-/* Media Query para telas menores */
-@media (max-width: 768px) {
-    .banner img {
-        max-width: 90%; /* Reduz um pouco o tamanho em telas menores */
-    }
-}
-
-@media (max-width: 480px) {
-    .banner img {
-        max-width: 80%; /* Ajusta ainda mais para dispositivos móveis */
-    }
+    object-fit: cover;
+    overflow: hidden;
 }
 
 /* Seção de Produtos */
@@ -133,10 +93,9 @@ nav ul li a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 120px; /* Aumenta a separação entre os produtos */
-    margin-bottom: 50px; /* Eleva os produtos mais para cima */
+    gap: 40px; /* Ajusta a separação entre os produtos */
+    margin-top: 50px; /* Move a seção de produtos mais para baixo */
 }
-
 
 .product {
     display: flex;
@@ -144,7 +103,7 @@ nav ul li a {
     align-items: center;
     text-decoration: none;
     color: black;
-    width: 200px; /* Mantém tamanho proporcional */
+    width: 200px;
 }
 
 .product img {
@@ -154,16 +113,30 @@ nav ul li a {
     position: relative;
 }
 
-/* Responsividade para produtos */
+/* Responsividade */
 @media (max-width: 768px) {
+    .banner img {
+        max-width: 90%;
+    }
+
     .products {
-        flex-direction: column; /* Organiza verticalmente */
+        flex-direction: column;
         align-items: center;
-        gap: 20px; /* Ajusta a separação */
+        gap: 20px;
     }
 
     .product {
-        width: 80%; /* Ocupa mais espaço */
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner img {
+        max-width: 80%;
+    }
+
+    .products {
+        margin-top: 30px; /* Ajusta espaçamento para telas menores */
     }
 }
 
