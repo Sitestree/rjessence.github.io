@@ -82,8 +82,8 @@ nav ul li a {
 }
 
 .banner {
-    width: 100%;
-    height: 100px; /* Ajusta a altura do banner conforme o cabeçalho */
+    width: 80%; /* Mantém apenas 80% da largura total */
+    height: 100px;
     object-fit: cover;
     overflow: hidden;
 }
