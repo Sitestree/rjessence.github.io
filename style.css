@@ -4,26 +4,22 @@ body {
     margin: 0;
     padding: 0;
 }
+
 /* Ajustando a altura do cabeçalho */
 header {
     background-color: #003366; /* Azul escuro */
-    padding: 20px 0; /* Aumentando o espaçamento interno */
+    padding: 15px 0; /* Reduzindo o espaçamento interno para evitar altura excessiva */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
-    height: 100px; /* Ajuste da altura fixa */
+    height: auto; /* Deixa a altura mais dinâmica */
 }
-
-
 
 /* Centralizar a logo corretamente */
 .logo-container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .logo {
@@ -31,23 +27,22 @@ header {
     height: auto;
 }
 
-/* Navegação alinhada à esquerda */
+/* Navegação centralizada e flexível */
 nav {
-    flex: 1;
     display: flex;
-    justify-content: center; /* Centraliza a navegação */
+    justify-content: center;
+    width: 100%;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 15px;
     padding: 0;
     margin: 0;
-    justify-content: space-evenly; /* Distribui os itens de maneira uniforme */
-    width: 100%; /* Garante que ocupe todo o espaço disponível */
+    flex-wrap: wrap; /* Permite ajuste automático em telas menores */
+    justify-content: center;
 }
-
 
 nav ul li {
     display: inline-block;
@@ -59,95 +54,42 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Ícones do cabeçalho alinhados à direita */
+/* Ícones do cabeçalho alinhados corretamente */
 .icon-group {
     display: flex;
-    justify-content: center; /* Centraliza os ícones */
-    gap: 8px; /* Reduz a distância entre os ícones */
-    width: auto; /* Impede que o contêiner ocupe toda a largura */
-}
-
-.icon-group {
-    display: flex;
-    justify-content: center; /* Mantém os ícones alinhados */
-    gap: 8px; /* Mantém uma distância equilibrada entre os ícones */
-    margin-right: 20px; /* Afasta o grupo da margem direita */
+    gap: 8px;
+    margin-right: 20px;
+    flex-wrap: wrap; /* Permite melhor ajuste em telas pequenas */
 }
 
 /* Garantindo que os ícones fiquem sempre brancos */
 .icon-group a {
-    color: white !important; /* Força a cor branca para evitar mudanças inesperadas */
-    text-decoration: none; /* Remove qualquer sublinhado */
+    color: white !important;
+    text-decoration: none;
 }
-
-
-
-
-
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .logo {
-        width: 50px;
-    }
-
-    .icon-group {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        width: 40px;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    .icon-group {
-        justify-content: center;
-    }
-}
-
 
 /* Banner Promocional */
 .banner-link {
     display: block;
     text-align: center;
-    margin: 40px auto; /* Centraliza o banner */
-    width: 100%; /* Ocupa toda a largura */
+    margin: 20px auto;
+    width: 100%;
 }
 
 .banner img {
-    max-width: 100%; /* Faz a imagem se ajustar ao contêiner */
-    height: auto; /* Mantém a proporção */
+    max-width: 100%;
+    height: auto;
     display: block;
-    margin: 0 auto; /* Centraliza horizontalmente */
-    border-radius: 8px; /* Bordas arredondadas (opcional) */
+    margin: 0 auto;
+    border-radius: 8px;
 }
-
-/* Media Query para telas menores */
-@media (max-width: 768px) {
-    .banner img {
-        max-width: 90%; /* Reduz um pouco o tamanho em telas menores */
-    }
-}
-
-@media (max-width: 480px) {
-    .banner img {
-        max-width: 80%; /* Ajusta ainda mais para dispositivos móveis */
-    }
-}
-
-
-
 
 /* Seção de Produtos */
 .products {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    flex-wrap: wrap; /* Adapta os produtos conforme o tamanho da tela */
+    justify-content: center;
+    gap: 20px;
     width: 100%;
 }
 
@@ -157,38 +99,46 @@ nav ul li a {
     align-items: center;
     text-decoration: none;
     color: black;
+    width: calc(100% / 3 - 20px); /* Ajuste para distribuição mais uniforme */
 }
 
+/* Ajuste do tamanho das imagens */
 .product img {
-    width: 200px;
+    max-width: 100%;
     height: auto;
-    display: block;
-    position: relative;
-    top: -40px; /* Ajuste para subir os ícones */
 }
 
-
-/* Responsividade */
+/* Melhor responsividade */
 @media (max-width: 768px) {
     .logo {
-        width: 50px;
+        width: 60px;
     }
 
-    .icon-group {
-        justify-content: center; /* Ajusta os ícones corretamente */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 80%; /* Ajusta o tamanho dos produtos no celular */
     }
 }
 
 @media (max-width: 480px) {
     .logo {
-        width: 40px;
-    }
-
-    nav ul {
-        flex-direction: column;
+        width: 50px;
     }
 
     .icon-group {
         justify-content: center;
+    }
+
+    .banner img {
+        max-width: 90%;
     }
 }
