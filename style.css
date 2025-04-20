@@ -113,23 +113,20 @@ nav ul li a {
 
 /* Banner Promocional */
 .promo-banner {
+    display: block; /* Faz o banner ocupar toda a largura */
     text-align: center;
-    background-color: #f8d7da;
+    background-color: #f8d7da; /* Cor de destaque */
     padding: 20px;
+    border-radius: 8px;
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: #c82333; /* Define a cor do texto */
+    font-weight: bold;
 }
 
-.promo-banner h2 {
-    font-size: 24px;
-    color: #c82333;
+.promo-banner:hover {
+    background-color: #f5c6cb; /* Efeito ao passar o mouse */
 }
 
-.promo-banner button {
-    background-color: #004085;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 18px;
-}
 
 /* Seção de Produtos */
 .products {
