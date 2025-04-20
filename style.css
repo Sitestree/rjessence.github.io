@@ -112,20 +112,26 @@ nav ul li a {
 
 
 /* Banner Promocional */
-.promo-banner {
-    display: block; /* Faz o banner ocupar toda a largura */
-    text-align: center;
-    background-color: #f8d7da; /* Cor de destaque */
-    padding: 20px;
-    border-radius: 8px;
-    text-decoration: none; /* Remove o sublinhado do link */
-    color: #c82333; /* Define a cor do texto */
-    font-weight: bold;
+.banner-link {
+    display: block;
+    width: 100%; /* Ocupa toda a largura */
+    text-align: center; /* Centraliza o conteúdo */
+    margin: 40px 0; /* Adiciona espaçamento acima e abaixo */
+    text-decoration: none; /* Remove sublinhado do link */
 }
 
-.promo-banner:hover {
-    background-color: #f5c6cb; /* Efeito ao passar o mouse */
+.banner img {
+    max-width: 80%; /* Ajusta o tamanho do banner */
+    height: auto; /* Mantém a proporção */
+    display: block;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    border-radius: 8px; /* Bordas arredondadas (opcional) */
 }
+
+.banner-link:hover .banner img {
+    opacity: 0.8; /* Efeito ao passar o mouse */
+}
+
 
 
 /* Seção de Produtos */
