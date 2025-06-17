@@ -1,21 +1,25 @@
 <?php
 include 'database.php';
 
-$email = $_POST['email'];
-$senha = $_POST['senha'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
 
-$sql = "SELECT * FROM Usuario WHERE email='$email'";
-$result = $conn->query($sql);
+    $sql = "SELECT * FROM Usuario WHERE email='$email'";
+    $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-    $usuario = $result->fetch_assoc();
-    
-    if (password_verify($senha, $usuario['senha'])) {
-        echo "Login realizado com sucesso!";
+    if ($result->num_rows > 0) {
+        $usuario = $result->fetch_assoc();
+        
+        if (password_verify($senha, $usuario['senha'])) {
+            echo "Login realizado com sucesso!";
+        } else {
+            echo "Senha incorreta!";
+        }
     } else {
-        echo "Senha incorreta!";
+        echo "Usuário não encontrado!";
     }
-} else {
-    echo "Usuário não encontrado!";
+
+    $conn->close();
 }
 ?>
