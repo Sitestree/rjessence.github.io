@@ -3,35 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RJ Essence</title>
+    <title>RJ Essence - Login/Cadastro</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script>
+        function toggleForm(formType) {
+            document.getElementById("login-form").style.display = formType === "login" ? "block" : "none";
+            document.getElementById("cadastro-form").style.display = formType === "cadastro" ? "block" : "none";
+        }
+    </script>
 </head>
 <body>
 
     <!-- Cabeçalho -->
-<header>
-    <div class="logo-container">
-        <a href="index.html">
-            <img src="https://github.com/Sitestree/rjessence.github.io/raw/main/logo%3Arj.jpeg" alt="Logo RJ Essence" class="logo">
-        </a>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="produtos.html">Produtos</a></li>
-            <li><a href="promocoes.html">Promoções</a></li>
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </nav>
-    <div class="icon-group">
-        <a href="#"><i class="fas fa-search"></i></a>
-        <a href="login.html"><i class="fas fa-user"></i></a>
-        <a href="https://www.instagram.com/rjessence/" target="_blank"><i class="fas fa-heart"></i></a>
-        <a href="carrinho.html"><i class="fas fa-box"></i></a>
-    </div>
-</header>
-<!-- Banner de Login -->
-<a href="login.html">
-    <img src="https://raw.githubusercontent.com/Sitestree/rjessence.github.io/main/Login%20e%20criar%20conta.png" alt="Banner Login">
-</a>
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="https://github.com/Sitestree/rjessence.github.io/raw/main/logo%3Arj.jpeg" alt="Logo RJ Essence" class="logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="promocoes.html">Promoções</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="icon-group">
+            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="login.html"><i class="fas fa-user"></i></a>
+            <a href="https://www.instagram.com/rjessence/" target="_blank"><i class="fas fa-heart"></i></a>
+            <a href="carrinho.html"><i class="fas fa-box"></i></a>
+        </div>
+    </header>
+
+    <!-- Seção de Login/Cadastro -->
+    <section class="auth-container">
+        <h2>Bem-vindo ao RJ Essence</h2>
+
+        <div class="toggle-buttons">
+            <button onclick="toggleForm('login')">Login</button>
+            <button onclick="toggleForm('cadastro')">Criar Conta</button>
+        </div>
+
+        <!-- Formulário de Login -->
+        <form id="login-form" method="POST" action="server/login.php">
+            <label for="email-login">E-mail:</label>
+            <input type="email" name="email" required>
+            <label for="senha-login">Senha:</label>
+            <input type="password" name="senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+
+        <!-- Formulário de Cadastro -->
+        <form id="cadastro-form" method="POST" action="server/cadastro.php" style="display: none;">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" required>
+            <label for="email-cadastro">E-mail:</label>
+            <input type="email" name="email" required>
+            <label for="senha-cadastro">Senha:</label>
+            <input type="password" name="senha" required>
+            <button type="submit">Criar Conta</button>
+        </form>
+    </section>
+
+</body>
+</html>
