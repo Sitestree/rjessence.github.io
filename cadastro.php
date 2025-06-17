@@ -6,8 +6,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 
-    echo "<p>Dados recebidos: Nome = $nome, Email = $email</p>";
+    // Exibir os dados que estão sendo recebidos
+    echo "<p>Nome: $nome</p><p>Email: $email</p>";
 
+    // Verificar se campos não estão vazios
+    if(empty($nome) || empty($email) || empty($senha)) {
+        die("Erro: Campos vazios!");
+    }
+
+    // Inserir no banco de dados
     $sql = "INSERT INTO Usuario (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
 
     if ($conn->query($sql) === TRUE) {
