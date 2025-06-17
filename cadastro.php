@@ -6,7 +6,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 
-    // Verificando se os dados foram recebidos corretamente
+    // Exibir os dados recebidos
+    echo "Nome: " . $nome . "<br>Email: " . $email . "<br>";
+
     if(empty($nome) || empty($email) || empty($senha)) {
         die("Erro: Campos vazios!");
     }
