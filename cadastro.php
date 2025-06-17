@@ -1,21 +1,15 @@
 <?php
 include 'database.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $categoria = $_POST["categoria"];
-    $descricao = $_POST["descricao"];
-    $volume = $_POST["volume"];
-    $preco = $_POST["preco"];
-    $promocao = $_POST["promocao"];
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$senha = password_hash($_POST['senha'], PASSWORD_DEFAULT); 
 
-    $sql = "INSERT INTO Produto (categoria, descricao, volume, preco, promocao) VALUES ('$categoria', '$descricao', '$volume', '$preco', '$promocao')";
+$sql = "INSERT INTO Usuario (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
 
-    if ($conn->query($sql) === TRUE) {
-        echo "Produto cadastrado com sucesso!";
-    } else {
-        echo "Erro ao cadastrar: " . $conn->error;
-    }
-
-    $conn->close();
+if ($conn->query($sql)) {
+    echo "Conta criada com sucesso!";
+} else {
+    echo "Erro: " . $conn->error;
 }
 ?>
