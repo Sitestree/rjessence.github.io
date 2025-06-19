@@ -6,12 +6,71 @@
     <title>RJ Essence - Login/Cadastro</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script>
-        function toggleForm(formType) {
-            document.getElementById("login-form").style.display = formType === "login" ? "block" : "none";
-            document.getElementById("cadastro-form").style.display = formType === "cadastro" ? "block" : "none";
+
+    <!-- CSS isolado da seção de autenticação -->
+    <style>
+        .auth-container {
+            padding: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
         }
-    </script>
+
+        .auth-box {
+            flex: 1;
+            min-width: 320px;
+            max-width: 480px;
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .auth-box h2 {
+            margin-bottom: 10px;
+        }
+
+        .auth-box p {
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .auth-box form input,
+        .auth-box form button {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .auth-box form button {
+            background-color: #003366;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .auth-box form button:hover {
+            background-color: #005599;
+        }
+
+        .auth-box .terms {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .auth-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -37,13 +96,13 @@
             <a href="carrinho.html"><i class="fas fa-box"></i></a>
         </div>
     </header>
-<!-- Seção de Login/Cadastro -->
-<section class="auth-container">
-    <div class="auth-wrapper">
+
+    <!-- Seção de Login/Cadastro -->
+    <section class="auth-container">
         <!-- Login -->
         <div class="auth-box">
             <h2>Login</h2>
-            <p>Atualize seu perfil e dados de pagamento, e acompanhe seus pedidos</p>
+            <p>Atualize seu perfil, dados de pagamento e acompanhe seus pedidos.</p>
             <form method="POST" action="server/login.php">
                 <label for="email-login">E-mail:</label>
                 <input type="email" name="email" id="email-login" required>
@@ -77,8 +136,7 @@
                 Ao criar uma conta, você concorda com nossos <a href="#">Termos</a> e <a href="#">Política de Privacidade e Cookies</a>.
             </p>
         </div>
-    </div>
-</section>
+    </section>
 
 </body>
 </html>
